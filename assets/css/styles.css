@@ -988,11 +988,6 @@ justify-content: center;
     justify-content: center;
 }
 
-@media(max-width: 675px){
-    .email-form, .contact-info, .contact-form, .newsletter{
-        width: 100%;
-    }
-}
 
 .email-form input, textarea{
     margin-bottom: 20px;
@@ -1076,7 +1071,11 @@ justify-content: center;
 }
 
 
-
+@media(max-width: 675px){
+    .email-form, .contact-info, .contact-form, .newsletter{
+        width: 100%;
+    }
+}
 /********************************
             Footer
 ***********************************/

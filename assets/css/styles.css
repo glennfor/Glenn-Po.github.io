@@ -1047,12 +1047,12 @@ justify-content: center;
 }
 
 .newsletter input[type="email"], .newsletter input[type="text"]{
-    outline:1.5px solid var(--main-blue);
+    outline: 1.5px solid var(--main-blue);
     border: none;
     border-radius: 4px;
     margin: 10px;
-    font-size: 18px;
-    padding: 4px 8px;
+    font-size: 16px;
+    padding: 2px 4px;
     font-family:  "Roboto", sans-serif;
    
 }

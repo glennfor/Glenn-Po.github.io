@@ -278,6 +278,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-inline: 2px;
         width: 100%;
         padding: 10px;
+        box-shadow: 0 0 24px 12px rgba(0, 0, 0, 0.12);
     }
 
     #main{
@@ -357,6 +358,7 @@ h1, h2, h3, h4, h5, h6 {
         #1481BA,
         #38369A,
         #0410ff,
+
         #2C3D55
 
     );

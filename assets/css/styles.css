@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* sections */
-section:not(section:first-child){
+#main section{
     box-sizing: border-box;
     padding: 20px;
     margin: 20px;
@@ -53,6 +53,7 @@ section:not(section:first-child){
 
 ::-webkit-scrollbar-thumb{
     border-radius: 100vw;
+    background-color: var(--main-blue);
     border: 1px solid  rgb(171, 196, 204);
    
 }
@@ -224,6 +225,7 @@ section:not(section:first-child){
 
 #navbar li{
     padding: 10px;
+    transition: all 300ms ease-in-out;
 }
 
 #navbar li a span{
@@ -234,18 +236,22 @@ section:not(section:first-child){
 #navbar li a{
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
-    
 }
 
-#navbar li:hover span{
+#navbar li:hover span,
+#navbar .navlink-active a span{
     color: #fff;
 }
 
-#navbar li:hover i{
+#navbar li:hover i,
+#navbar .navlink-active i{
     color: var(--main-blue);
 }
 
 
+.navlink-active{
+    background-color: rgb(85, 9, 121);
+}
 
 
 
@@ -268,7 +274,7 @@ section:not(section:first-child){
 }
 
 @media(max-width: 900px){
-    section:not(section:first-child){
+    #main section{
         margin-inline: 2px;
         width: 100%;
         padding: 10px;
@@ -287,6 +293,13 @@ section:not(section:first-child){
     height: 100%;
     overflow-x: hidden;
     margin-left: 300px;
+
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #home img{
     position: fixed;
@@ -310,6 +323,59 @@ section:not(section:first-child){
 
 
 
+#home .intro {
+    text-align: center;
+    padding: auto;
+    width: 100%;
+    text-shadow: 0px 0px 5px -5px rgba(0, 0, 0, .9);
+}
+
+#home .intro p{
+    font-size: 48px;
+    font-weight: 600;
+}
+#home .intro .title{
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+@keyframes colorRotate{
+    from{
+        filter: hue-rotate(0);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+#home .intro .title span {
+    background: linear-gradient(
+        to top right,
+        #725AC1,
+        #243186,
+        #1C7293,
+        #1481BA,
+        #38369A,
+        #0410ff,
+        #2C3D55
+
+    );
+    background-size: 100%;
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+
+}
+
+#home .intro .title span:hover{
+    animation: colorRotate 400ms linear infinite;
+}
+
+#home .intro .subtitle{
+    font-size: 2.5rem;
+}
+
 
 /* about */
 
@@ -317,6 +383,7 @@ section:not(section:first-child){
     background-color: rgba(0,0, 0, .8);
     color: #fff;
     text-align: center;
+    padding-block: 30px;
 }
 
 #about .my-social-media{
@@ -344,8 +411,28 @@ justify-content: center;
     font-size: 18px;
 }
 
+.edu-interests, .other-interests{
+    padding: auto;
+}
 
+.edu-interests ul, .other-interests ul{
+    list-style: none;
+    margin-inline: auto;
+    padding-left: 0;
+    display: inline-block;
+    text-align: left;
+}
+.edu-interests ul li::before {
+    content: "✔ ";
+}
 
+.other-interests ul li::before{
+    content: "📌";
+}
+
+.other-interests ul:last-child li::before{
+    content: "▶ ";
+}
 
 
 #about .my-work{
@@ -360,9 +447,13 @@ justify-content: center;
 }
 
 #about .my-work .container div{
-    width: 120px;
-    padding: 10px;
-    margin: 10px 20px;
+    text-align: center;
+    color: #fff;
+    width: 180px;
+    padding: 10px  20px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px -2px rgba(255,255,255, .9);
+    border-radius: 5px;
 }
 
 #about .my-work .container div img{
@@ -391,7 +482,9 @@ justify-content: center;
 .blog button{
     color: green;
 }
-
+.class button{
+    color: purple;
+}
 /* services */
 #services{
     text-justify: center;
@@ -514,6 +607,136 @@ justify-content: center;
 }
 
 
+/* resume */
+
+#resume{
+    text-justify: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* facts */
+
+#facts{
+    background-color: rgba(255,255, 255, .8);
+    background-color: rgba(20, 164, 230, 0.6);
+    text-align: center;
+}
+
+#facts .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.fact-item i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms ease-in-out;
+}
+
+.fact-item{
+    margin: 10px;
+}
+
+.fact-item h4{
+    text-align: center;
+}
+
+.fact-item .ico-circle{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 10px auto;
+    padding: auto;
+    text-align: center;
+    text-justify: center;
+    box-shadow: 0 0 0 10px var(--main-blue);
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms ease-in-out;
+   
+  }
+  
+  
+  .fact-item:hover .ico-circle{
+      background-color: var(--dark);
+      color: #fff;
+  }
+
+
+/* testimonials */
+
+#testimonials{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+
+    text-align: center;
+}
+
+#testimonials .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.testm-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, .9);
+    color: #fff;
+    padding: 10px 20px;
+    width: 380px;
+    margin: 20px;
+    transition: 400ms;
+}
+
+.testm-item .img-box {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 400ms;
+}
+
+.testm-item .img-box img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.testm-item .img-box .bio{
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: bold;
+    transition:400ms ease-in-out;
+}
+
+
+.testm-item:hover{
+    transform: rotateZ(5deg);
+}
+
+.testm-item:hover .img-box{
+    transform: translate(10%);
+}
+
+.testm-item p{
+    font-size: 13px;
+    font-style: italic;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+}
 
 
 /* portfolio */
@@ -821,12 +1044,12 @@ justify-content: center;
 }
 
 .newsletter input[type="email"], .newsletter input[type="text"]{
-    outline:  none;
-    border: 2px solid var(--main-dark);
-    border-radius: 5px;
+    outline:1.5px solid var(--main-blue);
+    border: none;
+    border-radius: 4px;
     margin: 10px;
     font-size: 18px;
-    padding: 2.5px 5px;
+    padding: 4px 8px;
     font-family:  "Roboto", sans-serif;
    
 }
@@ -899,8 +1122,8 @@ justify-content: center;
 
 #back-to-top i{
     font-size: 44px;
-    color:  var(--dark);
+    color:  var(--main-blue);
 }
 #back-to-top:hover i{
-    color: var(--main-blue);
+    color: var(--dark);
 }

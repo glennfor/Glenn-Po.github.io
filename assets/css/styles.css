@@ -31,7 +31,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* sections */
 section:not(section:first-child){
-    margin: 0;
     box-sizing: border-box;
     padding: 20px;
     margin: 20px;
@@ -39,6 +38,7 @@ section:not(section:first-child){
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+
 
 /**Stling the scroolbar**/
 ::-webkit-scrollbar{
@@ -198,6 +198,8 @@ section:not(section:first-child){
   }
 
 
+
+
   /**-------------------
   Desktop Navigation
   --------------------**/
@@ -265,6 +267,19 @@ section:not(section:first-child){
     
 }
 
+@media(max-width: 900px){
+    section:not(section:first-child){
+        margin-inline: 2px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    #main{
+        margin: 0px;
+        padding-inline: 0px;
+    }
+}
+
 /*****************home************/
 
 #home{
@@ -275,6 +290,7 @@ section:not(section:first-child){
 }
 #home img{
     position: fixed;
+    /* height: 100%; */
     width:calc(100% - 300px);
     top: 0;
     z-index: -5;
@@ -284,6 +300,8 @@ section:not(section:first-child){
 @media (max-width: 1199px){
    #home img{
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     #home{
         margin: 0;
@@ -319,11 +337,11 @@ justify-content: center;
 
 
 #about .my-social-media .social i{
-    font-size: 30px;
+    font-size: 24px;
 }
 
 #about .my-social-media .social p{
-    font-size: 24px;
+    font-size: 18px;
 }
 
 

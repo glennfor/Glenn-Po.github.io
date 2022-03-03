@@ -90,15 +90,16 @@ let navbarlinks = select('#navbar a', true)
   //sample swiper for testimonials 
 
 
-//   new Swiper(classname, {
-//     speed: 400,
+//   new Swiper('.super-container', {
+//     speed: 800,
 //     loop: true,
 //     autoplay: {
-//       delay: 5000,
+//       delay: 3000,
 //       disableOnInteraction: false
 //     },
+//     slidesPerView: 1,
 //     pagination: {
-//       el: ,
+//       el: '.pagination',
 //       type: 'bullets',
 //       clickable: true
 //     }

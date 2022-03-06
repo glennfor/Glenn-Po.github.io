@@ -104,3 +104,47 @@ let navbarlinks = select('#navbar a', true)
 //       clickable: true
 //     }
 //   });
+
+
+
+//implement working of the portfoilio sectio
+
+const filterButtons = select("#portfolio #portfolio-filters li", true)
+
+const portfoilioItems = select("#portfolio .container .portfolio-item", true)
+
+function filterItems(filter){
+
+  filterButtons.forEach(
+    filterButton=>{
+      if(filterButton.getAttribute("data-filter") == filter)
+        filterButton.classList.add('filter-active')
+      else
+        filterButton.classList.remove('filter-active')
+    }
+  ) 
+ 
+  portfoilioItems.forEach(item=>{
+    if(item.getAttribute('filter') == filter || filter=="*")
+    {
+      if(item.style.display == "none")
+        item.style.display = "inline-block"
+      item.style.transform = "scale(1)"
+    }
+      
+    else
+    {
+      item.style.transform = "scale(0)"
+      setTimeout(()=>{item.style.display = "none"}, 390)
+    }
+      
+  })
+}
+
+filterButtons.forEach(
+  filterButton=>{
+    filterButton.addEventListener("click", (ev)=>{
+      filterItems(filterButton.getAttribute("data-filter"))
+    })
+  }
+) 

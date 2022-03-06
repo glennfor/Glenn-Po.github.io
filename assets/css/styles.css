@@ -8,6 +8,7 @@
 --------------------------------------------------------------*/
 :root{
     font-family: "Poppins", 'Roboto', sans-serif;
+    font-size: 17px;
     --main-dark: #272829;
     --dark: #2c2f3f;
     --main-blue: #149ddd;
@@ -488,6 +489,29 @@ justify-content: center;
 .class button{
     color: purple;
 }
+#about .engagements {
+    padding: auto;
+}
+
+#about .engagements ul{
+    list-style: none;
+    margin-inline: auto;
+    padding-left: 0;
+    display: inline-block;
+    text-align: left;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#about .engagements ul li::before{
+    content: "👉  "
+}
+
+
+
+
+
 /* services */
 #services{
     text-justify: center;
@@ -784,7 +808,7 @@ justify-content: center;
     background-color: var(--dark);
 }
 
-@media(max-width: 900px){
+@media(max-width: 650px){
     #portfolio ul{
         border-radius: 10px;
     }
@@ -811,9 +835,10 @@ justify-content: center;
     position: relative;
     width: 280px ;
     margin: 10px;
-    display: block;
+    display: inline-block;
     overflow: hidden;
-
+    transform: scale(1);
+    transition: all 300ms ease-in-out;
     box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.8);
 }
 
@@ -821,7 +846,7 @@ justify-content: center;
     width: 280px;
     height: 250px;
     object-fit: cover;
-    transition: all 300ms ease-in-out;
+    transition: all 400ms ease-in-out;
 }
 
 #portfolio .container a .portfolio-item:hover img{

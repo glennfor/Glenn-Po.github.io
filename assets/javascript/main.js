@@ -148,3 +148,45 @@ filterButtons.forEach(
     })
   }
 ) 
+
+// exposition container
+
+let expostionContainer = select('#exposition')
+const expoContentBox = select('#exposition .container')
+const closeExpoButton = select('#exposition .close-expo')
+
+
+console.log(expostionContainer, closeExpoButton)
+closeExpoButton.onclick = ()=>expostionContainer.style.display = "none"
+
+
+//skills expostion
+
+const skillsButton = select("#skills button[data-skill]", true)
+
+console.log(skillsButton)
+const dataFile = '../data.json'
+
+if(skillsButton)
+skillsButton.forEach(
+  button => {
+    console.log(button.getAttribute('data-skill'))
+    button.onclick = ()=>{
+      //  console.log({button: button})
+    fetch(dataFile).then(response => response.json()).then(data => {
+      // console.log(data)
+      expoContentBox.innerHTML = ''
+      const filter = button.getAttribute('data-skill')
+      expostionContainer.getElementsByTagName('h5')[0].innerHTML = filter + ' Skill Categories';
+      for(let item of data[filter]){
+        const itemDOM = document.createElement('span')
+        itemDOM.innerHTML = item
+        expoContentBox.appendChild(itemDOM)
+      }
+    })
+
+    expostionContainer.style.display = "block"
+
+    }
+  }
+)

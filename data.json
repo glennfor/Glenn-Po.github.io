@@ -11,9 +11,14 @@
         "Book Covers", "Magazine Covers", "Reports", "Planner", "Comic Strip", 
         "Proposals", "Concept maps", "Tag", "Blog Graphics", "Bookmarks", "WallPapers"
     ],
-    "Video Editing":[
+    "Video Creation":[
         "Cartoon Animation",
-        "Text animation",
-        ""
+        "Text animation"
+    ],
+    "Programming":[
+        "C++ 90%", "Golang 50%", "PHP 40%"
+    ],
+    "Web Design":[
+        "One Page Sites"
     ]
 }

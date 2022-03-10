@@ -8,7 +8,7 @@
 --------------------------------------------------------------*/
 :root{
     font-family: "Poppins", 'Roboto', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     --main-dark: #272829;
     --dark: #2c2f3f;
     --main-blue: #149ddd;
@@ -336,6 +336,17 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 48px;
     font-weight: 600;
 }
+
+#home .intro a{
+    font-family: "Raleway", "Poppins", "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: .5px;
+    text-decoration: wavy;
+
+    padding: 10px 40px;
+    margin-top: 40px;
+}
 #home .intro .title{
     font-size: 3.5rem;
     font-weight: 800;
@@ -468,6 +479,7 @@ justify-content: center;
     display: block;
     margin: 10px;
 }
+
 
 #about .my-work .container div button{
     padding: 10px 50px;
@@ -620,7 +632,7 @@ justify-content: center;
     border-radius:10px ;
 }
 
-#skills .container div ul li button{
+#skills .container div button{
     width: 100%;
     text-align: center;
     text-justify: center;
@@ -641,6 +653,30 @@ justify-content: center;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
 }
+
+#resume .resume{
+    margin: 10px 100px;
+}
+
+@media screen and (max-width: 600px) {
+    #resume .resume{
+        margin: 10px 0px;
+    }
+}
+
+#resume .resume div h5{
+    text-align: center;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.12);
+    font-family: "Raleway", "Poppins", "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+#resume .resume div p{
+    text-align: left;
+}
+
+
 
 /* facts */
 
@@ -928,7 +964,7 @@ justify-content: center;
 /* contact */
 #contact{
     background-color: rgba(255, 255, 255, .9);
-    text-align: center;
+    text-align: left;
     padding-inline: auto;
     display: flex;
     flex-direction: column;
@@ -1067,6 +1103,9 @@ justify-content: center;
     margin: auto;
 }
 
+.newsletter form div{
+    text-align: center;
+}
 .newsletter input[type="email"], .newsletter input[type="text"]{
     outline: 1.5px solid var(--main-blue);
     border: none;
@@ -1156,3 +1195,87 @@ justify-content: center;
     color: var(--dark);
 }
 
+
+
+/********************************************8
+****************Exclusive Styling**********88
+*******************************************/
+
+#exposition{
+    display:none;
+    position: fixed;
+    /* overflow: scroll; */
+    left: 320;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 20;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0px 24px 0 rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    z-index: 1999;
+}
+
+@media (max-width: 1199px) {
+   
+    #exposition {
+      left: 0;
+    }
+  }
+
+
+#exposition .title {
+    border-bottom: 2px solid var(--main-blue);
+}
+
+#exposition .title h5{
+    text-align: center;
+    text-transform: capitalize;
+    font-size:32px;
+    font-weight: 600;
+}
+
+@media (max-width: 1199px) {
+    #exposition .title h5{
+        text-align: center;
+        text-transform: capitalize;
+        font-size:20px;
+        font-weight: 600;
+    }
+}
+
+#exposition .title i{
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 5;
+    top: 5;
+    font-size: 44px;
+    display: inline;
+}
+
+#exposition .container{
+    width: 100%;
+    height: clamp(fit-content, 90%);
+    height: 90%;
+    flex-grow: none;
+    position:relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll !important;
+    overflow: scroll;
+    margin-bottom: 20px;
+}
+
+#exposition .container span{
+    background-color: var(--dark);
+    color: rgb(108, 204, 199);
+    font-family: "Poppins", "Roboto", sans-serif;
+    font-style: bold;
+    font-size: 14.5px;
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 22px;
+    height: fit-content ;
+}

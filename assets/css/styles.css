@@ -867,7 +867,7 @@ justify-content: center;
     justify-content: center;
 }
 
-#portfolio .container a .portfolio-item{
+#portfolio .container .portfolio-item{
     position: relative;
     width: 280px ;
     margin: 10px;
@@ -878,19 +878,19 @@ justify-content: center;
     box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.8);
 }
 
-#portfolio .container a .portfolio-item img{
+#portfolio .container .portfolio-item img{
     width: 280px;
     height: 250px;
     object-fit: cover;
     transition: all 400ms ease-in-out;
 }
 
-#portfolio .container a .portfolio-item:hover img{
+#portfolio .container .portfolio-item:hover img{
     transform: scale(1.2);
     object-fit: cover;
 }
 
-#portfolio > .container >a> .portfolio-item  > .port-desc{
+#portfolio > .container > .portfolio-item  > .port-desc{
     position: absolute;
     left: 0;
     right: 0;

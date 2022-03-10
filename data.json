@@ -13,12 +13,20 @@
     ],
     "Video Creation":[
         "Cartoon Animation",
-        "Text animation"
+        "Text animation",
+        "Youtube Intro/Outro",
+        "Branding Videos","Adverts"
     ],
     "Programming":[
         "C++ 90%", "Golang 50%", "PHP 40%"
     ],
-    "Web Design":[
-        "One Page Sites"
+    "Web Design and Development":[
+        "One Page Sites", "Landing Pages", "E-cormmerce sites", "E-shops", "E-learning platforms"
+    ],
+    "Tutoring":[
+        "O/A-Level Computer Science", "O/A-level Mathematics", "O/A-Level Physics", "C Programming",
+        "C++ Programming", "Python Programming", "Web Design", "Basic Javascript Programming", "Google Suite Traning",
+        "MicroSoft Office Training", "Computer Literacy", "Training E-learning platforms and Instructional Tech ",
+        "Internet Skills"
     ]
 }

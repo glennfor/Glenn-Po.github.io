@@ -151,13 +151,13 @@ filterButtons.forEach(
 
 // exposition container
 
-let expostionContainer = select('#exposition')
+let expositionContainer = select('#exposition')
 const expoContentBox = select('#exposition .container')
 const closeExpoButton = select('#exposition .close-expo')
 
 
-console.log(expostionContainer, closeExpoButton)
-closeExpoButton.onclick = ()=>expostionContainer.style.display = "none"
+console.log(expositionContainer, closeExpoButton)
+closeExpoButton.onclick = ()=>expositionContainer.style.display = "none"
 
 
 //skills expostion
@@ -177,7 +177,7 @@ skillsButton.forEach(
       // console.log(data)
       expoContentBox.innerHTML = ''
       const filter = button.getAttribute('data-skill')
-      expostionContainer.getElementsByTagName('h5')[0].innerHTML = filter + ' Skill Categories';
+      expositionContainer.getElementsByTagName('h5')[0].innerHTML = filter + ' Skill Categories';
       for(let item of data[filter]){
         const itemDOM = document.createElement('span')
         itemDOM.innerHTML = item
@@ -185,7 +185,7 @@ skillsButton.forEach(
       }
     })
 
-    expostionContainer.style.display = "block"
+    expositionContainer.style.display = "block"
 
     }
   }

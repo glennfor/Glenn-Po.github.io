@@ -274,6 +274,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 300px;
     padding-block:60px;
     padding-bottom: 20px;
+    overflow: hidden;
 }
 
 @media (max-width: 1199px){
@@ -538,6 +539,7 @@ justify-content: center;
     text-justify: center;
     text-align: center;
     background-color: rgba(255,255, 255, .8);
+    overflow: hidden;
 }
 
 #services .container{

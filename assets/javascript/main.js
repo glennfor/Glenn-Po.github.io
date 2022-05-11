@@ -190,3 +190,10 @@ skillsButton.forEach(
     }
   }
 )
+
+
+AOS.init(
+  {
+    duration: 1200,
+  }
+)

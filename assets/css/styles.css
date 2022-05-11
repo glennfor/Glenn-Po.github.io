@@ -15,6 +15,10 @@
     --main-text-color: var(--main-dark)
 }
 
+body{
+    font-family: "Poppins", 'Roboto', sans-serif;   
+}
+
 a {
   color: var(--main-blue);
   text-decoration: none;
@@ -23,6 +27,10 @@ a {
 a:hover {
   color: #37b3ed;
   text-decoration: none;
+}
+
+p{
+    font-family: "Poppins", "Roboto", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -335,6 +343,7 @@ h1, h2, h3, h4, h5, h6 {
 #home .intro p{
     font-size: 48px;
     font-weight: 600;
+    font-family: "Raleway", "Poppins", "Roboto", sans-serif;
 }
 
 #home .intro a{

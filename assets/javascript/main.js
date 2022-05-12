@@ -192,6 +192,8 @@ skillsButton.forEach(
 )
 
 
+
+//Animation On Scroll
 AOS.init(
   {
     duration: 1200,

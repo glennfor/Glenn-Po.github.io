@@ -9,9 +9,11 @@
     <link rel="icon" href="./assets/images/mains/profile-update.jpg">
     <link rel="icon" href="">
 
-    <!-- Google Fonts  -->
-    <link rel="stylesheet" href="">
-
+    <!-- Animate CSS  -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <!-- Bootstrap CSS Files-->
     <link href="assets/bootstrap/aos/aos.css" rel="stylesheet">
     <link href="assets/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -854,17 +856,19 @@
         <!-- contact -->
         <section id="contact">
             <h2>Contact me 📞📩</h2>
-            <p>
+            <p class="text-center">
                 🟢🟢🟢 <br>
                 Kindly get in contact with me. You may use the <b>form or contacts information below</b> , or better still,
                 any of the <b>multiple media I linked above</b>. Contact me to ...
                 <br>
                 🟢🟢🟢
                
-                <br>
+                <p class="mx-auto">
                 📩 To inquire about and request my services <br>
                 📩 To give me some suggestions and feedback <br>
-                📩 To ask some important questions 
+                📩 To ask some important questions     
+                </p>
+                
             </p>
 
             <div class="map-section">
@@ -912,23 +916,43 @@
                 <button class="btn btn-primary" type="submit">Message Me</button>
                 </form>
             </div>
-                    
             <div class="newsletter">
                 <h4>Join My Newsletter.📨</h4>
                     <p>Hi👋 there. Subscribe and be the first to get updates on new blog posts📰 and video content🎬.</p>
                     <form 
                     class= "needs-validation d-flex"*-9
                     name="gform" id="gform" enctype="text/plain"
-                    action onsubmit>
+                    action="https://docs.google.com/forms/d/e/1FAIpQLScXZTiNkWUldxd6WrChTObYcrMpTZQXd3VTp8IECdo0yvckcA/formResponse?"
+                    target="hidden_iframe" onsubmit="submitted=true;"
+                    >
                         <div>
-                            <input type="text" placeholder="Your name..." 
+                            <input type="text" 
+                            name="entry.1305524444"
+                            id="entry.1305524444"
+                            placeholder="Your name..." 
                             required>
-                            <input type="email" placeholder="Enter Email..." 
-                                required>
+
+                            <input type="email" 
+                            name="entry.318193108"
+                            id="entry.318193108"
+                            placeholder="Enter Email..." 
+                            required>
                         </div>
                         
-                        <input class="btn btn-primary" id="ent-111" type="submit" value="🚀Subscribe">
+                        <input class="btn btn-primary" 
+                        id="subscribe" type="submit" value="🚀Subscribe">
                     </form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}" ></iframe>
+
+                    <script>
+                        let form = document.querySelector('#gform');
+                        let subsButton = document.querySelector("#subscribe");
+                        form.addEventListener('submit', function(e) {
+                            subsButton.value = ("Subscribed!🥳")
+                            subsButton.classList.add("animate__animated", "animate__rubberBand")
+                            setTimeout(()=>subsButton.classList.remove("animate__animated"), 1500);
+                         });
+                    </script>
             </div>
         
         

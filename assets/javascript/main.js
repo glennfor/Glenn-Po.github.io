@@ -171,10 +171,8 @@ if(skillsButton)
 skillsButton.forEach(
   button => {
     console.log(button.getAttribute('data-skill'))
-    button.onclick = ()=>{
-      //  console.log({button: button})
-    fetch(dataFile).then(response => response.json()).then(data => {
-      // console.log(data)
+    button.onclick = async ()=>{
+    await fetch(dataFile).then(response => response.json()).then(data => {
       expoContentBox.innerHTML = ''
       const filter = button.getAttribute('data-skill')
       expositionContainer.getElementsByTagName('h5')[0].innerHTML = filter + ' Skill Categories';
